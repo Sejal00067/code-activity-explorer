@@ -29,13 +29,13 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading }) => {
         className="flex-1"
         disabled={isLoading}
       />
-      <Button type="submit" disabled={isLoading || !username.trim()}>
+      <Button type="submit" disabled={isLoading || !username.trim()} className="flex items-center">
         {isLoading ? (
           <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
         ) : (
           <Search className="h-4 w-4 mr-2" />
         )}
-        <span>Search</span>
+        Search
       </Button>
     </form>
   );
